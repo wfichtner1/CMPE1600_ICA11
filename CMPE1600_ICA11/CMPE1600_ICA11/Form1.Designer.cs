@@ -54,6 +54,7 @@
             this.UI_SortButton.TabIndex = 1;
             this.UI_SortButton.Text = "Sort";
             this.UI_SortButton.UseVisualStyleBackColor = true;
+            this.UI_SortButton.Click += new System.EventHandler(this.UI_SortButton_Click);
             // 
             // UI_ClearButton
             // 
