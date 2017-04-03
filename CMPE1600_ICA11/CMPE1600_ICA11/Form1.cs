@@ -53,6 +53,7 @@ namespace CMPE1600_ICA11
             lock (placeholder)
             {
                 listBox1.Items.Add(valueArray[i]);
+                progressBar1.PerformStep();
             }
         }
         private void counter()
@@ -80,6 +81,7 @@ namespace CMPE1600_ICA11
                 unsorted = false;
                 for (int j = 0; j < valueArray.Length - 1; j++)
                 {
+                    
                     if (valueArray[j] > valueArray[j + 1])
                     {
                         unsorted = true;
@@ -96,6 +98,7 @@ namespace CMPE1600_ICA11
         private void UI_SortButton_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
+            progressBar1.Value = 0;
             BubbleSort();
             
         }
